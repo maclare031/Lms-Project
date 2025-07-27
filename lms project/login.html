@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AlgoForgeStudios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-section">
+                    <img src="assets/logo.png" alt="AlgoForgeStudios Logo" class="login-logo">
+                    <h1 class="login-title">AlgoForgeStudios</h1>
+                </div>
+                <p class="login-subtitle">Digital Learning, Simplified</p>
+            </div>
+
+            <div class="login-options">
+                <div class="option-card user-option" onclick="selectUserLogin()">
+                    <div class="option-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Student Login</h3>
+                    <p>Access your learning dashboard and courses</p>
+                    <button class="option-btn user-btn">Login as Student</button>
+                </div>
+
+                <div class="option-card admin-option" onclick="selectAdminLogin()">
+                    <div class="option-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Admin Login</h3>
+                    <p>Manage courses, users, and platform settings</p>
+                    <button class="option-btn admin-btn">Login as Admin</button>
+                </div>
+            </div>
+
+            <div class="login-form-container" id="loginFormContainer" style="display: none;">
+                <div class="form-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <h2 id="formTitle">Login</h2>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Login</button>
+                </form>
+
+                <div class="demo-credentials">
+                    <h4>Demo Credentials</h4>
+                    <div class="credential-item">
+                        <strong>Student:</strong> student@demo.com / password123
+                    </div>
+                    <div class="credential-item">
+                        <strong>Admin:</strong> admin@demo.com / admin123
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                    <a href="index.html" class="home-link">Back to Home</a>
+                </div>
+            </div>
+
+            <div class="login-footer">
+                <p>&copy; 2025 AlgoForgeStudios. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="js/login.js"></script>
+</body>
+</html> 

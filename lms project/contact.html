@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AlgoForgeStudios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="AlgoForgeStudios Logo">
+            <span>AlgoForgeStudios</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#features">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="login.html" class="login-link">Login</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Get in Touch</h1>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Let's Start a Conversation</h2>
+                        <p>Whether you have a question about our courses, need technical support, or want to partner with us, we're here to help.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-content">
+                                    <h3>Email Us</h3>
+                                    <p>info@algoforgestudios.com</p>
+                                    <p>support@algoforgestudios.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📞</div>
+                                <div class="method-content">
+                                    <h3>Call Us</h3>
+                                    <p>+1 (555) 123-4567</p>
+                                    <p>Mon-Fri: 9AM-6PM EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📍</div>
+                                <div class="method-content">
+                                    <h3>Visit Us</h3>
+                                    <p>123 AI Street, Tech City</p>
+                                    <p>Silicon Valley, CA 94025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">Sending...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I get started with a course?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Simply create an account, browse our course catalog, and enroll in any course that interests you. You can start learning immediately after enrollment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What if I need technical support?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our technical support team is available 24/7. You can reach us via email at support@algoforgestudios.com or through the contact form above.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer refunds?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer a 30-day money-back guarantee. If you're not satisfied with your course, you can request a full refund within 30 days of purchase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I access courses offline?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, our courses require an internet connection. However, we're working on offline capabilities for select courses.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer certificates?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Upon completion of any course, you'll receive a certificate of completion that you can add to your resume or LinkedIn profile.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are there any prerequisites?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most of our beginner courses require no prior experience. Advanced courses may have prerequisites, which are clearly listed on each course page.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Locations -->
+        <section class="locations-section">
+            <div class="container">
+                <h2>Our Offices</h2>
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Headquarters</h3>
+                            <span class="location-badge">Main Office</span>
+                        </div>
+                        <div class="location-details">
+                            <p><strong>Address:</strong><br>123 AI Street, Tech City<br>Silicon Valley, CA 94025</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Email:</strong> hq@algoforgestudios.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>European Office</h3>
+                            <span class="location-badge">EU Hub</span>
+                        </div>
+                        <div class="location-details">
+                            <p><strong>Address:</strong><br>456 Innovation Ave<br>London, UK SW1A 1AA</p>
+                            <p><strong>Phone:</strong> +44 20 1234 5678</p>
+                            <p><strong>Email:</strong> eu@algoforgestudios.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3>Asia Pacific</h3>
+                            <span class="location-badge">APAC Hub</span>
+                        </div>
+                        <div class="location-details">
+                            <p><strong>Address:</strong><br>789 Tech Boulevard<br>Singapore 018956</p>
+                            <p><strong>Phone:</strong> +65 6789 0123</p>
+                            <p><strong>Email:</strong> apac@algoforgestudios.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="social-section">
+            <div class="container">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media for the latest updates, tips, and insights.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                        Twitter
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                        </svg>
+                        Pinterest
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AlgoForgeStudios</h3>
+                <p>Empowering the next generation of AI professionals through innovative education.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>info@algoforgestudios.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AlgoForgeStudios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html> 

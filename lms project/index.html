@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoForgeStudios</title>
+        <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar">
+    <a href="#home" class="logo">
+        <img src="assets/logo.png" alt="AlgoForgeStudios Logo">
+        <span>AlgoForgeStudios</span>
+    </a>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-link">Login</a>
+    </div>
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Think Big. Train Smart. Win Hard.</h1>
+        <p>Welcome to AlgoForgeStudios - where cutting-edge technology meets innovative learning. Master algorithms,
+            forge your skills, and build the future with our AI-powered educational platform.</p>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Students</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Courses</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Success Rate</span>
+            </div>
+        </div>
+        <div class="hero-buttons">
+            <button class="cta-btn" onclick="window.location.href='login.html'">Start Learning</button>
+            <button class="secondary-btn">Explore Courses</button>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>AI Tutor</h3>
+                <p>Get instant responses to your questions with our AI-powered tutor</p>
+            </div>
+            <div class="feature-card">
+                <h3>Interactive Content</h3>
+                <p>Engage with dynamic, interactive learning materials</p>
+            </div>
+            <div class="feature-card">
+                <h3>Progress Tracking</h3>
+                <p>Monitor your learning journey with detailed analytics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Carousel Section -->
+    <section id="blog-carousel" class="blog-carousel-section">
+        <div class="carousel-container">
+            <h2>Latest Insights & Articles</h2>
+            <p>Discover cutting-edge research and expert insights in AI and machine learning</p>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn">&#8249;</button>
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Blog cards will be dynamically loaded here -->
+                </div>
+                <button class="carousel-btn next-btn" id="nextBtn">&#8250;</button>
+            </div>
+
+            <div class="carousel-indicators" id="carouselIndicators">
+                <!-- Indicators will be dynamically created -->
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>info@ai-learning.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Learning Platform. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Blog Modal -->
+<div id="home-blog-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Article Details</h3>
+            <span class="close" onclick="closeBlogModal()">&times;</span>
+        </div>
+        <div id="home-blog-modal-content" class="blog-modal-body">
+            <!-- Blog content will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

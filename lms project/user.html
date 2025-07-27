@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page - AlgoForgeStudios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="AlgoForgeStudios Logo">
+            <span>AlgoForgeStudios</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" onclick="logout()" class="logout-link">Logout</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h1>Welcome back, <span class="user-name">Student</span>! 👋</h1>
+                    <p>Continue your learning journey with AI and machine learning</p>
+                </div>
+                <div class="welcome-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Active Courses</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <span class="stat-number">78%</span>
+                            <span class="stat-label">Completion Rate</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Hours Learned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-grid">
+                <button class="action-card" onclick="openAI()">
+                    <div class="action-icon">🤖</div>
+                    <h3>AI Tutor</h3>
+                    <p>Get instant help with your questions</p>
+                </button>
+                <button class="action-card" onclick="scheduleSession()">
+                    <div class="action-icon">📅</div>
+                    <h3>Schedule Session</h3>
+                    <p>Book a 1-on-1 tutoring session</p>
+                </button>
+                <button class="action-card" onclick="viewProgress()">
+                    <div class="action-icon">📊</div>
+                    <h3>View Progress</h3>
+                    <p>Track your learning analytics</p>
+                </button>
+                <button class="action-card" onclick="joinCommunity()">
+                    <div class="action-icon">👥</div>
+                    <h3>Join Community</h3>
+                    <p>Connect with fellow learners</p>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Dashboard Content -->
+        <section class="dashboard-content">
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="courses">
+                    <span class="tab-icon">📚</span>
+                    My Courses
+                </button>
+                <button class="tab-btn" data-tab="recent">
+                    <span class="tab-icon">🕒</span>
+                    Recent Activity
+                </button>
+                <button class="tab-btn" data-tab="analytics">
+                    <span class="tab-icon">📊</span>
+                    Analytics
+                </button>
+                <button class="tab-btn" data-tab="resources">
+                    <span class="tab-icon">📖</span>
+                    Resources
+                </button>
+            </div>
+
+            <!-- Courses Tab -->
+            <div class="tab-content active" id="courses-tab">
+                <div class="courses-grid">
+                    <div class="course-card featured">
+                        <div class="course-header">
+                            <div class="course-badge">Featured</div>
+                            <div class="course-progress">
+                                <span class="progress-text">85% Complete</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Machine Learning Fundamentals</h3>
+                            <p>Master the basics of ML algorithms and techniques</p>
+                            <div class="course-meta">
+                                <span class="meta-item">🕒 12 hours</span>
+                                <span class="meta-item">📝 8 modules</span>
+                                <span class="meta-item">⭐ 4.8/5</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-primary">Continue Learning</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-progress">
+                                <span class="progress-text">60% Complete</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Data Science Essentials</h3>
+                            <p>Learn data analysis, visualization, and statistical methods</p>
+                            <div class="course-meta">
+                                <span class="meta-item">🕒 16 hours</span>
+                                <span class="meta-item">📝 10 modules</span>
+                                <span class="meta-item">⭐ 4.6/5</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-primary">Continue Learning</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-progress">
+                                <span class="progress-text">45% Complete</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Deep Learning with Python</h3>
+                            <p>Build neural networks and deep learning models</p>
+                            <div class="course-meta">
+                                <span class="meta-item">🕒 20 hours</span>
+                                <span class="meta-item">📝 12 modules</span>
+                                <span class="meta-item">⭐ 4.7/5</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-primary">Continue Learning</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card new">
+                        <div class="course-header">
+                            <div class="course-badge new">New</div>
+                            <div class="course-progress">
+                                <span class="progress-text">0% Complete</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <h3>AI Ethics & Responsible AI</h3>
+                            <p>Understand the ethical implications of AI development</p>
+                            <div class="course-meta">
+                                <span class="meta-item">🕒 8 hours</span>
+                                <span class="meta-item">📝 6 modules</span>
+                                <span class="meta-item">⭐ 4.9/5</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-primary">Start Learning</button>
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Tab -->
+            <div class="tab-content" id="recent-tab">
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📚</div>
+                        <div class="activity-content">
+                            <h4>Completed Module 3: Neural Networks</h4>
+                            <p>Machine Learning Fundamentals</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                        <div class="activity-score">+25 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">🏆</div>
+                        <div class="activity-content">
+                            <h4>Earned Badge: Data Analyst</h4>
+                            <p>Completed 5 data analysis projects</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                        <div class="activity-score">+100 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">👥</div>
+                        <div class="activity-content">
+                            <h4>Joined Study Group: ML Enthusiasts</h4>
+                            <p>Connect with 15 fellow learners</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                        <div class="activity-score">+10 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">📊</div>
+                        <div class="activity-content">
+                            <h4>Completed Quiz: Statistics Basics</h4>
+                            <p>Score: 92% - Excellent!</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                        <div class="activity-score">+50 XP</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Tab -->
+            <div class="tab-content" id="analytics-tab">
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Learning Progress</h3>
+                        <div class="chart-container">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Time Spent Learning</h3>
+                        <div class="time-stats">
+                            <div class="time-item">
+                                <span class="time-label">This Week</span>
+                                <span class="time-value">12.5 hours</span>
+                            </div>
+                            <div class="time-item">
+                                <span class="time-label">This Month</span>
+                                <span class="time-value">48.2 hours</span>
+                            </div>
+                            <div class="time-item">
+                                <span class="time-label">Total</span>
+                                <span class="time-value">156.8 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Skills Acquired</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Machine Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Data Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Deep Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Tab -->
+            <div class="tab-content" id="resources-tab">
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <h3>Study Materials</h3>
+                        <p>Access comprehensive study guides, cheat sheets, and reference materials</p>
+                        <button class="btn-primary">Browse Materials</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">🎥</div>
+                        <h3>Video Library</h3>
+                        <p>Watch recorded lectures, tutorials, and expert interviews</p>
+                        <button class="btn-primary">Watch Videos</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">💻</div>
+                        <h3>Code Examples</h3>
+                        <p>Download practical code examples and project templates</p>
+                        <button class="btn-primary">Download Code</button>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">📝</div>
+                        <h3>Practice Tests</h3>
+                        <p>Test your knowledge with quizzes and practice exams</p>
+                        <button class="btn-primary">Take Tests</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- AI Tutor Modal -->
+    <div id="aiTutorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>AI Tutor Assistant</h3>
+                <span class="close" onclick="closeAI()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                <p>Hello! I'm your AI tutor. How can I help you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Ask me anything...">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/user-dashboard.js"></script>
+</body>
+</html>

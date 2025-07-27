@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AI Learning Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">AI Learning</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#activity">Activity</a>
+            <a href="#" class="active">Profile</a>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="profile-main">
+        <div class="profile-layout">
+            <!-- Sidebar -->
+            <div class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100x100/3498db/ffffff?text=AH" alt="Profile Picture" id="profileImage">
+                        <input type="file" id="sidebarImageUpload" accept="image/*" style="display: none;">
+                        <button type="button" class="change-photo-btn" onclick="document.getElementById('sidebarImageUpload').click()">
+                            📷 Change Photo
+                        </button>
+                    </div>
+                    <div class="sidebar-menu">
+                        <a href="#" class="menu-item active">
+                            <span class="menu-icon">👤</span>
+                            Edit Profile
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">📚</span>
+                            My Courses
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">📊</span>
+                            Reports & Insights
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">⚙️</span>
+                            Settings
+                        </a>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">🚪</span>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="profile-content">
+                <h2>Edit Profile</h2>
+                
+                <form class="profile-form" id="profileForm">
+                    <!-- Basic Information -->
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn URL</label>
+                                <input type="url" id="linkedin" placeholder="LinkedIn URL">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob">DOB</label>
+                                <input type="date" id="dob" placeholder="DOB">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" placeholder="Home Address">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" placeholder="State">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country">
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="interests">Interest</label>
+                                <textarea id="interests" placeholder="Enter your interests" rows="8"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="topSkills">Top Skills</label>
+                                <textarea id="topSkills" placeholder="Enter your top skills" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="form-section">
+                        <h3>Education</h3>
+                        <div class="education-entry">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="institutionName">Institution Name</label>
+                                    <input type="text" id="institutionName" placeholder="Institution Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <input type="text" id="department" placeholder="Department" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="yearOfPassing">Year Of Passing</label>
+                                    <input type="number" id="yearOfPassing" placeholder="Year Of Passing" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="add-more-btn">+Add More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="form-section">
+                        <h3>Experience</h3>
+                        <div class="experience-entry">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="companyName">Company Name</label>
+                                    <input type="text" id="companyName" placeholder="Company Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="jobDesignation">Designation</label>
+                                    <input type="text" id="jobDesignation" placeholder="Designation">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fromDate">From</label>
+                                    <input type="date" id="fromDate" placeholder="From">
+                                </div>
+                                <div class="form-group">
+                                    <label for="toDate">To</label>
+                                    <input type="date" id="toDate" placeholder="To">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="responsibilities">Key Responsibilities</label>
+                                    <textarea id="responsibilities" placeholder="Key Responsibilities" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="form-section">
+                        <h3>Projects Handled</h3>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <textarea id="projectsHandled" placeholder="Projects Handled" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="add-more-btn">+Add More</button>
+                    </div>
+
+
+
+                    <!-- Profile Image Upload -->
+                    <div class="form-section">
+                        <h3>Upload Profile Image</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="file" id="profileImageUpload" accept="image/*">
+                                <label for="profileImageUpload" class="file-upload-label">Choose File</label>
+                                <span class="file-name">No file chosen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="update-profile-btn">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

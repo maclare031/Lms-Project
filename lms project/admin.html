@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - AlgoForgeStudios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.svg" alt="AlgoForgeStudios Logo">
+            <span>AlgoForgeStudios</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Admin Sidebar -->
+            <aside class="admin-sidebar">
+                <div class="admin-profile">
+                    <div class="admin-avatar">
+                        <img src="https://via.placeholder.com/60x60/8000ff/ffffff?text=AD" alt="Admin">
+                    </div>
+                    <h3>Admin Panel</h3>
+                    <p>AlgoForgeStudios</p>
+                </div>
+                
+                <nav class="admin-nav">
+                    <a href="#" class="admin-nav-item active" data-section="users">
+                        <span class="nav-icon">👥</span>
+                        User Management
+                    </a>
+                    <a href="#" class="admin-nav-item" data-section="courses">
+                        <span class="nav-icon">📚</span>
+                        Course Management
+                    </a>
+                    <a href="#" class="admin-nav-item" data-section="analytics">
+                        <span class="nav-icon">📈</span>
+                        Analytics
+                    </a>
+                    <a href="#" class="admin-nav-item" data-section="settings">
+                        <span class="nav-icon">⚙️</span>
+                        Settings
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Admin Content -->
+            <div class="admin-content">
+                <!-- Users Section -->
+                <section id="users-section" class="admin-section active">
+                    <div class="section-header">
+                        <h2>User Management</h2>
+                        <p>Manage user accounts, permissions, and access</p>
+                    </div>
+
+                    <div class="users-overview">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-info">
+                                    <h3 id="total-users">1,247</h3>
+                                    <p>Total Users</p>
+                                    <span class="stat-change positive">+12% this month</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">🟢</div>
+                                <div class="stat-info">
+                                    <h3 id="active-users">1,089</h3>
+                                    <p>Active Users</p>
+                                    <span class="stat-change positive">+8% this week</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">🆕</div>
+                                <div class="stat-info">
+                                    <h3 id="new-users">45</h3>
+                                    <p>New This Week</p>
+                                    <span class="stat-change positive">+15% vs last week</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">⚠️</div>
+                                <div class="stat-info">
+                                    <h3 id="pending-users">23</h3>
+                                    <p>Pending Approval</p>
+                                    <span class="stat-change neutral">No change</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="users-table-container">
+                            <h3>Recent Users</h3>
+                            <div class="table-controls">
+                                <input type="text" placeholder="Search users..." class="search-input">
+                                <select class="filter-select">
+                                    <option value="all">All Users</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                    <option value="pending">Pending</option>
+                                </select>
+                            </div>
+                            <div class="users-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Joined</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://via.placeholder.com/32x32/3498db/ffffff?text=JS" alt="User">
+                                                    <span>John Smith</span>
+                                                </div>
+                                            </td>
+                                            <td>john@example.com</td>
+                                            <td><span class="status-badge active">Active</span></td>
+                                            <td>2024-01-15</td>
+                                            <td>
+                                                <button class="action-btn">Edit</button>
+                                                <button class="action-btn danger">Suspend</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://via.placeholder.com/32x32/e74c3c/ffffff?text=JD" alt="User">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                            </td>
+                                            <td>jane@example.com</td>
+                                            <td><span class="status-badge pending">Pending</span></td>
+                                            <td>2024-01-20</td>
+                                            <td>
+                                                <button class="action-btn">Approve</button>
+                                                <button class="action-btn danger">Reject</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="user-info">
+                                                    <img src="https://via.placeholder.com/32x32/27ae60/ffffff?text=MB" alt="User">
+                                                    <span>Mike Brown</span>
+                                                </div>
+                                            </td>
+                                            <td>mike@example.com</td>
+                                            <td><span class="status-badge inactive">Inactive</span></td>
+                                            <td>2024-01-10</td>
+                                            <td>
+                                                <button class="action-btn">Activate</button>
+                                                <button class="action-btn danger">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                            <div class="chart-placeholder">
+                                <canvas id="userChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-card">
+                            <h3>Course Popularity</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="courseChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Management Section -->
+                <section id="users-section" class="admin-section">
+                    <div class="section-header">
+                        <h2>User Management</h2>
+                        <button class="add-btn">+ Add New User</button>
+                    </div>
+
+                    <div class="filters">
+                        <input type="text" placeholder="Search users..." class="search-input">
+                        <select class="filter-select">
+                            <option value="">All Users</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+
+                    <div class="users-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Courses</th>
+                                    <th>Join Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-tbody">
+                                <tr>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://via.placeholder.com/40x40/8000ff/ffffff?text=JD" alt="User">
+                                            <span>John Doe</span>
+                                        </div>
+                                    </td>
+                                    <td>john.doe@example.com</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>5</td>
+                                    <td>2024-01-15</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Delete</button>
+                                    </td>
+                                </tr>
+                                <!-- More user rows will be dynamically added -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Course Management Section -->
+                <section id="courses-section" class="admin-section">
+                    <div class="section-header">
+                        <h2>Course Management</h2>
+                        <button class="add-btn">+ Add New Course</button>
+                    </div>
+
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>AI Fundamentals</h3>
+                                <div class="course-status published">Published</div>
+                            </div>
+                            <p>Learn the basics of Artificial Intelligence</p>
+                            <div class="course-stats">
+                                <span>👥 245 students</span>
+                                <span>⭐ 4.8 rating</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="action-btn edit">Edit</button>
+                                <button class="action-btn access">Manage Access</button>
+                                <button class="action-btn delete">Delete</button>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>Web Development Bootcamp</h3>
+                                <div class="course-status draft">Draft</div>
+                            </div>
+                            <p>Complete guide to modern web development</p>
+                            <div class="course-stats">
+                                <span>👥 0 students</span>
+                                <span>⭐ No ratings</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="action-btn edit">Edit</button>
+                                <button class="action-btn publish">Publish</button>
+                                <button class="action-btn delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Section -->
+                <section id="analytics-section" class="admin-section">
+                    <div class="section-header">
+                        <h2>Analytics & Reports</h2>
+                        <div class="date-filter">
+                            <select>
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                                <option>Last year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h3>Learning Progress</h3>
+                            <div class="progress-stats">
+                                <div class="progress-item">
+                                    <span>Courses Started</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span>Courses Completed</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                    <span>45%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-card">
+                            <h3>User Engagement</h3>
+                            <div class="engagement-stats">
+                                <div class="engagement-item">
+                                    <span>Daily Active Users</span>
+                                    <span class="engagement-value">1,234</span>
+                                </div>
+                                <div class="engagement-item">
+                                    <span>Average Session Time</span>
+                                    <span class="engagement-value">45 min</span>
+                                </div>
+                                <div class="engagement-item">
+                                    <span>Retention Rate</span>
+                                    <span class="engagement-value">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings-section" class="admin-section">
+                    <div class="section-header">
+                        <h2>Platform Settings</h2>
+                        <p>Configure your AlgoForgeStudios platform</p>
+                    </div>
+
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <h3>General Settings</h3>
+                            <div class="setting-item">
+                                <label>Platform Name</label>
+                                <input type="text" value="AlgoForgeStudios">
+                            </div>
+                            <div class="setting-item">
+                                <label>Default Language</label>
+                                <select>
+                                    <option>English</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+                            <button class="save-btn">Save Changes</button>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Course Access Settings</h3>
+                            <div class="setting-item">
+                                <label>
+                                    <input type="checkbox" checked> Auto-approve course enrollments
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>
+                                    <input type="checkbox"> Require payment for premium courses
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>
+                                    <input type="checkbox" checked> Allow course reviews
+                                </label>
+                            </div>
+                            <button class="save-btn">Save Changes</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
